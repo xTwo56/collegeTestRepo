@@ -1,4 +1,4 @@
-def kawaii(func: callable):
+def kawaii(func):
     def Wrap():
         print("**** Kawaii! ****")
         dio = func()
@@ -6,3 +6,8 @@ def kawaii(func: callable):
         return dio
     return Wrap
 
+@kawaii
+def hello():
+    print("Hello, World!")
+
+hello()
